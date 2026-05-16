@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng kết - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-internet">
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">Portfolio <span>UET</span></a>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link">Giới thiệu</a></li>
+            <li class="nav-item">
+                <a href="projects.html" class="nav-link">Bài tập ▾</a>
+                <div class="dropdown-menu">
+                    <a href="projects.html" class="dropdown-item">6 Bài tập thành phần</a>
+                </div>
+            </li>
+            <li class="nav-item"><a href="reflection.html" class="nav-link" style="color: var(--accent);">Tổng kết</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <div class="card-label">PHẢN TƯ VÀ TRƯỞNG THÀNH</div>
+            <h1>Bộ Quy Tắc <span>AI Của Kỹ Sư Robot</span></h1>
+            <p class="text-dim">Viết code giỏi chưa đủ, một kỹ sư thực thụ cần biết cách "sống chung" và làm chủ AI. Dưới đây là 6 nguyên tắc thực hành cá nhân mình tự đúc kết sau khóa học nhằm duy trì liêm chính học thuật.</p>
+            
+            <div class="grid-sym">
+                <div class="card">
+                    <div class="card-val">1. Làm chủ kiến trúc</div>
+                    <div class="text-dim" style="font-size: 13px; margin-top: 8px;">Tự vẽ sơ đồ khối và lưu đồ trên giấy trước khi yêu cầu AI viết lệnh.</div>
+                </div>
+                <div class="card">
+                    <div class="card-val">2. Công cụ Debug</div>
+                    <div class="text-dim" style="font-size: 13px; margin-top: 8px;">Ưu tiên dùng AI tìm lỗi phần mềm thay vì khởi tạo từ con số 0.</div>
+                </div>
+                <div class="card">
+                    <div class="card-val">3. Test phần cứng</div>
+                    <div class="text-dim" style="font-size: 13px; margin-top: 8px;">Mọi thuật toán AI sinh ra phải được đối chiếu datasheet và test thực tế.</div>
+                </div>
+                <div class="card">
+                    <div class="card-val">4. Bảo mật dữ liệu</div>
+                    <div class="text-dim" style="font-size: 13px; margin-top: 8px;">Tuyệt đối không tải bản vẽ cơ khí hoặc mã độc quyền lên chatbot công cộng.</div>
+                </div>
+                <div class="card">
+                    <div class="card-val">5. Chú thích minh bạch</div>
+                    <div class="text-dim" style="font-size: 13px; margin-top: 8px;">Sử dụng comment rõ ràng trong mã nguồn khi có sự tối ưu của AI.</div>
+                </div>
+                <div class="card">
+                    <div class="card-val">6. Năng lực giải trình</div>
+                    <div class="text-dim" style="font-size: 13px; margin-top: 8px;">Chỉ giữ lại code nếu bản thân đủ năng lực giải thích từng luồng tín hiệu.</div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="bottom-nav">
+            <a href="index.html" class="btn-page">↺ Kết thúc (Quay lại Trang chủ)</a>
+        </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Chỉ bắt các link chuyển trang nội bộ, bỏ qua các link mở tab mới (Drive)
+            const internalLinks = document.querySelectorAll('a[href="index.html"], a[href="projects.html"], a[href="reflection.html"]');
+            
+            internalLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault(); // Ngăn trình duyệt chuyển trang ngay lập tức
+                    const targetUrl = this.href;
+                    
+                    // Thêm hiệu ứng mờ dần
+                    document.body.classList.add('fade-out');
+                    
+                    // Chờ 300ms (bằng thời gian chạy animation) rồi mới chuyển trang
+                    setTimeout(() => {
+                        window.location.href = targetUrl;
+                    }, 300);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Giới thiệu - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-robot">
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">Portfolio <span>UET</span></a>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link" style="color: var(--accent);">Giới thiệu</a></li>
+            <li class="nav-item">
+                <a href="projects.html" class="nav-link">Bài tập ▾</a>
+                <div class="dropdown-menu">
+                    <a href="projects.html" class="dropdown-item">6 Bài tập thành phần</a>
+                </div>
+            </li>
+            <li class="nav-item"><a href="reflection.html" class="nav-link">Tổng kết</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <div style="display: flex; gap: 40px; align-items: center;">
+                <div style="flex: 1;">
+                    <div class="card-label">PORTFOLIO KỸ THUẬT SỐ • 2024-2025</div>
+                    <h1>Nguyễn Đặng<br><span>Đức Thành</span></h1>
+                    <p class="text-dim">Xin chào! Mình là Nguyễn Đặng Đức Thành, sinh viên năm nhất chương trình Kỹ thuật Robot (CN17) tại Đại học Công Nghệ — ĐHQGHN. Mình có niềm đam mê mạnh mẽ với lĩnh vực giao thoa giữa cơ khí, điện tử và trí tuệ nhân tạo.</p>
+                    <p class="text-dim">Trong năm học đầu tiên này, môn Nhập môn Công nghệ Số đã giúp mình xây dựng những nền tảng quan trọng: từ tổ chức dữ liệu hệ thống, tìm kiếm học thuật, đến sử dụng AI có trách nhiệm. Đây là tập hợp minh chứng về những gì mình đã học trong học kỳ I.</p>
+                </div>
+                <div style="width: 250px; height: 250px; border-radius: 12px; overflow: hidden; border: 2px solid var(--accent);">
+                    <img src="thanh.jpg" alt="Hình Robot" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="info-grid">
+                <div class="card"><div class="card-label">Mã Sinh Viên</div><div class="card-val">25023682</div></div>
+                <div class="card"><div class="card-label">Lớp</div><div class="card-val">RE2-K70</div></div>
+                <div class="card"><div class="card-label">Chuyên ngành</div><div class="card-val">Kỹ thuật Robot (CN17)</div></div>
+                <div class="card"><div class="card-label">Trường</div><div class="card-val">Đại học Công Nghệ - ĐHQGHN</div></div>
+            </div>
+        </section>
+    </div>
+    <div class="bottom-nav">
+            <a href="projects.html" class="btn-page">Xem Bài tập dự án ➔</a>
+        </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Chỉ bắt các link chuyển trang nội bộ, bỏ qua các link mở tab mới (Drive)
+            const internalLinks = document.querySelectorAll('a[href="index.html"], a[href="projects.html"], a[href="reflection.html"]');
+            
+            internalLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault(); // Ngăn trình duyệt chuyển trang ngay lập tức
+                    const targetUrl = this.href;
+                    
+                    // Thêm hiệu ứng mờ dần
+                    document.body.classList.add('fade-out');
+                    
+                    // Chờ 300ms (bằng thời gian chạy animation) rồi mới chuyển trang
+                    setTimeout(() => {
+                        window.location.href = targetUrl;
+                    }, 300);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

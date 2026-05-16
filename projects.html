@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập dự án - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Định dạng riêng cho nút bấm "Xem minh chứng" dạng khối đơn giản */
+        .btn-standalone {
+            display: inline-block;
+            background-color: var(--accent);
+            color: #0A192F; /* Màu chữ tối để nổi bật trên nền xanh sáng */
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
+        }
+        .btn-standalone:hover {
+            background-color: #7dd3fc; /* Sáng lên khi di chuột vào */
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-circuit">
+    
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">Portfolio <span>UET</span></a>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link">Giới thiệu</a></li>
+            <li class="nav-item"><a href="projects.html" class="nav-link" style="color: var(--accent);">Bài tập dự án</a></li>
+            <li class="nav-item"><a href="reflection.html" class="nav-link">Tổng kết</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="project-layout">
+            
+            <div class="tab-menu">
+                <button class="tablinks" onclick="openTab(event, 'Bai1')" id="defaultOpen">Bài 1: Thao tác tệp & thư mục</button>
+                <button class="tablinks" onclick="openTab(event, 'Bai2')">Bài 2: Tìm kiếm học thuật</button>
+                <button class="tablinks" onclick="openTab(event, 'Bai3')">Bài 3: Viết Prompt hiệu quả</button>
+                <button class="tablinks" onclick="openTab(event, 'Bai4')">Bài 4: Công cụ hợp tác</button>
+                <button class="tablinks" onclick="openTab(event, 'Bai5')">Bài 5: Sáng tạo nội dung số</button>
+                <button class="tablinks" onclick="openTab(event, 'Bai6')">Bài 6: AI có trách nhiệm</button>
+            </div>
+
+            <div class="project-content">
+                
+                <div id="Bai1" class="tabcontent">
+                    <h2>Bài 1: Thao tác cơ bản với tập tin và thư mục</h2>
+                    <p>Thực hành và làm chủ quy trình 12 bước quản lý dữ liệu số khoa học trên môi trường Windows File Explorer:</p>
+                    <p>Hệ thống hóa không gian lưu trữ bằng cách truy cập ổ đĩa dữ liệu Data (D:), khởi tạo thư mục gốc mang tính định danh cá nhân <code>ThucHanh_NguyenDangDucThanh</code>. Tiến hành tạo lập tệp văn bản thô <code>GhiChu.txt</code> và quy chuẩn hóa tên tệp thành <code>GhiChuQuanTrong.txt</code>. Thiết lập kiến trúc phân tầng logic bằng thư mục con <code>TaiLieu</code>. Thực thi các lệnh sao chép, di chuyển tệp tin <code>DiChuyen.txt</code>, quản lý dung lượng thông qua cơ chế xóa vĩnh viễn (Shift + Delete) và khôi phục dữ liệu từ hệ Thùng rác (Recycle Bin).</p>
+                    
+                    <div style="text-align: left;">
+                        <a href="https://docs.google.com/document/d/12MrlPTNfe4G2E7FvAIZHRlG-R_RvouPR/edit?usp=drive_link&ouid=106615070601937720406&rtpof=true&sd=true" target="_blank" class="btn-standalone">Xem minh chứng</a>
+                    </div>
+                </div>
+
+                <div id="Bai2" class="tabcontent">
+                    <h2>Bài 2: Tìm kiếm và đánh giá thông tin học thuật</h2>
+                    <p><strong>Chủ đề nghiên cứu:</strong> Ứng dụng thuật toán SLAM (Simultaneous Localization and Mapping) dựa trên Deep Learning cho Robot di động tự động (AMR) trong môi trường động.</p>
+                    <p><strong>Nội dung thực hiện:</strong> Thu thập thành công 11 tài liệu học thuật (bao gồm 7 bài báo khoa học chất lượng cao) thông qua việc đối chiếu chéo trên 5 loại nguồn chuyên sâu vượt yêu cầu (IEEE Xplore, ScienceDirect, Springer, arXiv và hệ thống dữ liệu số VNU-LIC). Sử dụng linh hoạt các toán tử tìm kiếm nâng cao để giải quyết bài toán sai số động học của AMR trong môi trường nhà kho và bệnh viện thực tế. Tiến hành phân tích độ tin cậy nghiêm ngặt của nguồn tin tạp chí khoa học chuyên ngành (như IEEE T-RO) và nguồn mở GitHub theo hệ tiêu chuẩn đánh giá CRAAP khắt khe.</p>
+                    
+                    <table>
+                        <tr>
+                            <th>STT</th>
+                            <th>Loại nguồn</th>
+                            <th>Tác giả / Tổ chức chính</th>
+                            <th>Năm</th>
+                            <th>Tiêu chí đánh giá nổi bật (CRAAP)</th>
+                            <th>Xếp hạng độ tin cậy</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Báo khoa học (IEEE T-RO)</td>
+                            <td>Chen, L., et al.</td>
+                            <td>2024</td>
+                            <td>Tạp chí nhóm Q1 hàng đầu thế giới. Quy trình bình duyệt khắt khe, thực nghiệm Gazebo và phần cứng TurtleBot3 mạnh mẽ.</td>
+                            <td>Xuất sắc (5/5)</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Mã nguồn mở (GitHub)</td>
+                            <td>Campos, C., et al.</td>
+                            <td>2025</td>
+                            <td>ORB_SLAM3 Repository minh bạch, tính thực tiễn cao trên hệ điều hành ROS (>8.5k Stars).</td>
+                            <td>Cao (4/5)</td>
+                        </tr>
+                    </table>
+
+                    <div style="text-align: left;">
+                        <a href="https://docs.google.com/document/d/1fKledi_Krc_HPqxRp469gQ3Hni8iyPw9/edit?usp=drive_link&ouid=106615070601937720406&rtpof=true&sd=true" target="_blank" class="btn-standalone">Xem minh chứng</a>
+                    </div>
+                </div>
+
+                <div id="Bai3" class="tabcontent">
+                    <h2>Bài 3: Viết Prompt hiệu quả cho các tác vụ học tập</h2>
+                    <p>Ứng dụng kỹ thuật Prompt Engineering nâng cao để giải quyết tác vụ toán học chuyên sâu: Giải thích bản chất khái niệm <strong>"Ma trận hiệp phương sai (Covariance Matrix)"</strong> trong môn Xác suất thống kê phục vụ thuật toán lọc Kalman trên Robot.</p>
+                    <p>Xây dựng và chạy thực nghiệm đối chiếu 3 cấu trúc Prompt khác nhau. Mô hình Prompt Nâng cao (Gán vai trò Giảng viên Toán tin UET + Bối cảnh đối tượng tiếp nhận + Chuỗi tư duy Chain-of-Thought từ đơn biến sang đa biến + Kỹ thuật so sánh Analogy trực quan + Ràng buộc dữ liệu đầu ra bằng công thức LaTeX và Bảng biểu) mang lại phản hồi logic vượt trội, giúp nắm vững bản chất toán học ứng dụng trong Machine Learning thay vì sao chép lý thuyết thô từ điển.</p>
+                    
+                    <div style="text-align: left;">
+                        <a href="https://docs.google.com/document/d/1RMJFjkzJ40qqbWoCbv8PGHxoK8bscSfg/edit?usp=drive_link&ouid=106615070601937720406&rtpof=true&sd=true" target="_blank" class="btn-standalone">Xem minh chứng</a>
+                    </div>
+                </div>
+
+                <div id="Bai4" class="tabcontent">
+                    <h2>Bài 4: Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm</h2>
+                    <p>Vận hành đồng bộ mô hình quản trị dự án số đám mây trong thời gian nhóm cộng tác 1 tuần. Hệ sinh thái công cụ phối hợp bao gồm: **Trello** điều phối tiến độ qua bảng Kanban kỹ thuật số (To-do, Doing, Done) và đặt deadline rõ ràng; **Google Docs** cộng tác soạn thảo văn bản đồng thời; **Google Drive** tổ chức hệ thống cây thư mục lưu trữ logic phân loại khoa học; và **Discord/Zalo** duy trì trung tâm giao tiếp nhanh.</p>
+                    <p><strong>Giải pháp kỹ thuật khắc phục thử thách:</strong> Chuyển quyền sửa trực tiếp trên Google Docs sang tính năng "Đề xuất chỉnh sửa" (Suggesting mode) để xử lý bài toán xung đột dữ liệu. Áp dụng tính năng Ghim tin nhắn (Pin message) trên Discord cho các quyết định quan trọng để giải quyết hiện tượng trôi tin, đồng thời áp đặt khung giờ đồng bộ trạng thái nhóm cố định (Sync-up) từ 20h - 21h hàng ngày nhằm nâng cao tính kỷ luật nhóm.</p>
+                    
+                    <div style="text-align: left;">
+                        <a href="https://docs.google.com/document/d/1GSUy98F6HAi_2bE6ykkZJgAHTmRIBRJt/edit?usp=drive_link&ouid=106615070601937720406&rtpof=true&sd=true" target="_blank" class="btn-standalone">Xem minh chứng</a>
+                    </div>
+                </div>
+
+                <div id="Bai5" class="tabcontent">
+                    <h2>Bài 5: Sử dụng AI tạo sinh trong sáng tạo nội dung số</h2>
+                    <p>Triển khai dự án sáng tạo nội dung số truyền thông giáo dục hiện đại: Sản xuất bài viết Blog học thuật kết hợp thiết kế đồ họa Infographic tóm tắt.</p>
+                    <p><strong>Chủ đề dự án:</strong> <em>"Hội chứng ảo tưởng năng lực (Illusion of Competence) do phụ thuộc AI trong quá trình tự học của sinh viên"</em>. Quy trình điều phối phối hợp đa nền tảng Generative AI: Khai thác **Google Gemini** lập cấu trúc khung lý thuyết và tự biên tập bổ sung các cơ chế tâm lý học 'siêu nhận thức' (metacognition) gắn liền với ví dụ thực tế lập trình; ứng dụng **DALL-E 3** tạo lập tác phẩm nghệ thuật số ẩn dụ cao về sự đối lập giữa vẻ tự tin bên ngoài và bóng đen trống rỗng trong gương; điều phối giao diện bằng **Canva AI (Magic Design)** để tối ưu bảng màu công nghệ xanh dương và tinh chỉnh hiển thị phông chữ tiếng Việt chuyên nghiệp.</p>
+                    
+                    <div style="text-align: left;">
+                        <a href="https://docs.google.com/document/d/1kWnxrEKFjc8mbSdANwPb5EkQSDKB15Lg/edit?usp=drive_link&ouid=106615070601937720406&rtpof=true&sd=true" target="_blank" class="btn-standalone">Xem minh chứng</a>
+                    </div>
+                </div>
+
+                <div id="Bai6" class="tabcontent">
+                    <h2>Bài 6: Sử dụng AI có trách nhiệm trong học tập và nghiên cứu</h2>
+                    <p>Nghiên cứu chính sách liêm chính học thuật và quy chế chống đạo văn mã nguồn nghiêm ngặt tại Trường Đại học Công nghệ (UET - ĐHQGHN). Tác vụ thực nghiệm được triển khai thông qua việc lập trình thuật toán Động học ngược (Inverse Kinematics) bằng ngôn ngữ C++ cho cụm 3 khớp servo (Coxa, Femur, Tibia) của chân dự án Robot nhện 18 bậc tự do (18-DOF Hexapod) điều khiển bằng vi điều khiển Arduino trên trợ lý **Gemini**.</p>
+                    <p><strong>Hiệu chỉnh phản biện thực tế:</strong> Các phương trình toán lượng giác lý thuyết của AI cung cấp là chính xác, nhưng AI hoàn toàn bỏ qua các giới hạn vật lý thực tế của mô hình phần cứng. Sinh viên đã tiến hành bổ sung hàm rào chắn dữ liệu <code>constrain()</code> để chống vỡ cơ cấu cơ khí do góc quay vượt biên, đồng thời cấu trúc lại phần cứng bằng cách tích hợp module mở rộng dòng xung PWM PCA9685 thông qua phương thức giao tiếp I2C bảo đảm dòng điện tải an toàn. Trích dẫn tài liệu minh bạch theo chuẩn cấu trúc IEEE.</p>
+                    
+                    <div style="text-align: left;">
+                        <a href="https://docs.google.com/document/d/1tQv0-6y_hnV12fcglhxGBKJM0VlQhpXo/edit?usp=drive_link&ouid=106615070601937720406&rtpof=true&sd=true" target="_blank" class="btn-standalone">Xem minh chứng</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        // Tự động kích hoạt mở Tab Bài 1 khi tải trang
+        document.getElementById("defaultOpen").click();
+    </script>
+    <div class="bottom-nav">
+            <a href="index.html" class="btn-page">🡨 Về trang Giới thiệu</a>
+            <a href="reflection.html" class="btn-page">Đến trang Tổng kết ➔</a>
+        </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Chỉ bắt các link chuyển trang nội bộ, bỏ qua các link mở tab mới (Drive)
+            const internalLinks = document.querySelectorAll('a[href="index.html"], a[href="projects.html"], a[href="reflection.html"]');
+            
+            internalLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault(); // Ngăn trình duyệt chuyển trang ngay lập tức
+                    const targetUrl = this.href;
+                    
+                    // Thêm hiệu ứng mờ dần
+                    document.body.classList.add('fade-out');
+                    
+                    // Chờ 300ms (bằng thời gian chạy animation) rồi mới chuyển trang
+                    setTimeout(() => {
+                        window.location.href = targetUrl;
+                    }, 300);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
